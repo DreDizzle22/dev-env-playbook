@@ -1,0 +1,5 @@
+---
+
+brew_packages:
+  - tree
+  - jq

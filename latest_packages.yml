@@ -1,0 +1,14 @@
+- hosts: "{{local}}"
+  vars_files:
+      - group_vars/dev_env_servers
+      - host_vars/localhost
+  tasks:
+  - name: List Packages to Install
+    debug:
+      msg: "{{ item }}"
+    with_items: "{{ brew_packages }}"
+
+  - name: Install Packages
+    homebrew:
+      name: "{{ brew_packages }}"
+      state: latest
