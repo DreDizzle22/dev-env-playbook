@@ -3,12 +3,21 @@
       - group_vars/dev_env_servers
       - host_vars/localhost
   tasks:
-  - name: List Packages to Install
+  - name: List Packages to Uninstall
     debug:
       msg: "{{ item }}"
     with_items: "{{ brew_packages }}"
 
-  - name: Install Packages
+  - name: Uninstall Packages
     homebrew:
       name: "{{ brew_packages }}"
+      state: absent
+  - name: List Cask Packages to Uninstall
+    debug:
+      msg: "{{ item }}"
+    with_items: "{{ brew_cask_packages }}"
+
+  - name: Uninstall Cask Packages
+    homebrew:
+      name: "{{ brew_cask_packages }}"
       state: absent

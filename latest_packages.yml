@@ -12,3 +12,13 @@
     homebrew:
       name: "{{ brew_packages }}"
       state: latest
+
+  - name: List Cask Packages to Install
+    debug:
+      msg: "{{ item }}"
+    with_items: "{{ brew_cask_packages }}"
+
+  - name: Install Cask Packages
+    homebrew_cask:
+      name: "{{ brew_cask_packages }}"
+      state: latest

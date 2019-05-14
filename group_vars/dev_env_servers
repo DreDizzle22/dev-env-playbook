@@ -1,5 +1,14 @@
 ---
 
 brew_packages:
+  - node
+  - git
   - tree
   - jq
+
+brew_cask_packages:
+  - 1password
+  - visual-studio-code
+  - virtual-box
+  - slack
+  - microsoft-teams 
