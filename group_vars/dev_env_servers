@@ -5,10 +5,17 @@ brew_packages:
   - git
   - tree
   - jq
+  - yarn
+  - bash
+  - python
 
 brew_cask_packages:
   - 1password
+  - postman
   - visual-studio-code
   - virtual-box
   - slack
+  - sublime
+  - iterm2
+  - beyond-compare
   - microsoft-teams 
